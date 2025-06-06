@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature grid 12</title>
+    <style>
+        *{
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+           font-family: "Bitter", sans-serif; 
+        }
+        body{
+            background: linear-gradient(to bottom, #e0f7fa, #e7fef8);
+            color: #333;
+        }
+        .container{
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        /*========== Grid System =================*/
+        .grid-12{
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.2rem;
+            margin-top: 2rem;
+        }
+     /*========== Navbar =================*/
+        .nav-title{
+            grid-column: span 4;
+            font-size: 2.2rem;
+            color: #2eaf91;
+        }
+        .nav-links{
+            grid-column: span 8;
+            display: flex;
+            justify-content: flex-end;
+            font-weight: bolder;
+            gap: 3rem;
+        }
+        .nav-links a{
+            text-decoration: none;
+            color:#2eaf91; 
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+        .nav-links a:hover{
+            color: #333;
+            transform: scale(1.2);
+        }
+     /*========== Hero Section=================*/
+
+        .hero img{
+            grid-column: span 6;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 8px 50px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in;
+        }
+        .hero img:hover{
+            transform: scale(1.05);
+            box-shadow: 0 8px 50px rgba(161, 155, 6, 0.4);
+        }
+
+       /*========== Gallery Section=================*/
+
+        .gallery img{
+            width: 100%;
+            height:250px ;
+            object-fit: cover;
+            grid-column: span 3;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+
+        }
+        .gallery img:hover{
+            transform: scale(1.05);
+              box-shadow: 0 8px 50px rgba(252, 66, 4, 0.4);
+        }
+        .footer{
+            text-align: center;
+            color: #555;
+            padding: 2rem 0;
+        }
+
+/*======== Tablet Size ========= */
+        @media (max-width:768px){
+            .nav-title{
+                font-size: 2rem;
+            }
+            .nav-links a{
+                font-size:1.1rem ;
+            }
+            .gallery img{
+                grid-column: span 6;
+            }
+        }
+        
+/*========= Phone size ========= */
+        @media (max-width:479px){
+                 .nav-title{
+                font-size: 1.7rem;
+            }
+                .nav-links a{
+                font-size:1rem ;
+            }
+            .hero img{
+                grid-column: span 12;
+            }
+            .gallery img {
+                grid-column: span 12;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ======== Navbar ========================-->
+        <div class="navbar grid-12">
+            <h1 class="nav-title">Nature Blizz</h1>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
+ <!-- ======== Hero Image ========================-->
+
+        <div class="hero grid-12">
+            <img src="https://wallpapercave.com/wp/fgwUOQg.jpg" alt="Nature 1">
+            <img src="https://img.freepik.com/premium-psd/jasmine-flower-png_738506-4050.jpg" alt="Nature 2">
+        </div>
+    <!-- ======== Gallery Image ========================-->   
+
+         <div class="gallery grid-12">
+            <img src="https://wallpapercave.com/wp/fgwUOQg.jpg" alt="Nature 1">
+            <img src="https://img.freepik.com/premium-psd/jasmine-flower-png_738506-4050.jpg" alt="Nature 2">
+            <img src="http://www.pixelstalk.net/wp-content/uploads/2016/04/Rose-flower-wallpaper-HD-backgrounds-desktop.jpg" alt="Nature 3">
+            <img src="https://wallpapercave.com/wp/fgwUOQg.jpg" alt="Nature 1">
+            <img src="https://wallpapercave.com/wp/fgwUOQg.jpg" alt="Nature 1">
+            <img src="https://img.freepik.com/premium-psd/jasmine-flower-png_738506-4050.jpg" alt="Nature 2">
+               <img src="http://www.pixelstalk.net/wp-content/uploads/2016/04/Rose-flower-wallpaper-HD-backgrounds-desktop.jpg" alt="Nature 3">
+            <img src="https://img.freepik.com/premium-psd/jasmine-flower-png_738506-4050.jpg" alt="Nature 2">
+            <img src="http://www.pixelstalk.net/wp-content/uploads/2016/04/Rose-flower-wallpaper-HD-backgrounds-desktop.jpg" alt="Nature 3">
+            <img src="http://www.pixelstalk.net/wp-content/uploads/2016/04/Rose-flower-wallpaper-HD-backgrounds-desktop.jpg" alt="Nature 3">
+            <img src="https://img.freepik.com/premium-psd/jasmine-flower-png_738506-4050.jpg" alt="Nature 2">
+            <img src="http://www.pixelstalk.net/wp-content/uploads/2016/04/Rose-flower-wallpaper-HD-backgrounds-desktop.jpg" alt="Nature 3">
+        </div>
+        <div class="footer">
+            <p>© 2025 Nature Bliss. All rights reserved.</p>
+        </div>
+    </div>
+    <script>
+        /// 0 1      1* +1 = 2
+        //(a)0 + (b)1 = 1*
+        //1 + 1* = 2
+        //2
+        //  for loop 0 1 1 2 3 5
+        // 0 1  0+1 = 1*
+        let prev2 = 0;
+        let prev1 = 1;
+        console.log(prev2)
+        console.log(prev1)
+        for(let fibo = 0; fibo <10; fibo++){
+            let newFibo = prev2 + prev1;
+            console.log(newFibo);
+            prev2 = prev1;
+            prev1 = newFibo;
+        }
+       // recursion 
+
+    function fibonacciRecusive(n,a=0, b=1 ){
+        if(n <=0) return;
+        console.log(a);
+        fibonacciRecusive(n-1,b,a+b);     
+    }
+    fibonacciRecusive(10);
+
+    function myRec(n, a= 0, b = 1){
+        console.log(`n:${n} a:${a} b:${b}`)
+    }
+    myRec(10,56,78)
+console.log('======================================')
+    function F(n) {
+    if (n <= 1) {
+        return n;
+    } else {
+        return F(n - 1) + F(n - 2);
+    }
+}
+
+function F(n) {
+    if (n <= 1) {
+        return n;
+    } else {
+        return F(n - 1) + F(n - 2);
+    }
+}
+
+for (let i = 0; i <= 5; i++) {
+    console.log(F(i));
+}
+console.log('==========================')
+function fun(n) {
+    if (n <= 1) {
+        console.log(n);
+    } else {
+        console.log(fun(n - 1) + F(n - 2)) ;
+    }
+}
+fun(5);
+
+
+
+    </script>
+</body>
+</html>
+
+

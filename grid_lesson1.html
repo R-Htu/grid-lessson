@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            display: grid;
+            background-color: cadetblue;
+            grid-template-columns:repeat(3,100px);
+            gap: 20px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .grid-container > div{
+            background-color: blanchedalmond;
+            padding: 20px;
+        }  
+        .inlinegrid-container{
+            display: inline-grid;
+            grid-template-columns: repeat(3,100px);
+            gap: 20px;
+            background-color: aquamarine;
+        }
+        .inlinegrid-container > div{
+            background-color: burlywood;
+            padding: 20px;
+        }
+            
+    </style>
+</head>
+<body>
+    <h2>Block Grid</h2>
+    <p>This is before the grid
+        <div class="grid-container">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+      
+    </div>
+    This is after the grid.
+    </p>
+    
+    <p>This is before the inline grid.
+        <div class="inlinegrid-container">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        
+    </div>
+    This is text after the inline grid gfhghgh</p>
+</body>
+</html>
