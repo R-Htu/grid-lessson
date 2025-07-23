@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Gallery</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Bitter", sans-serif; }
+
+        body { background: linear-gradient(to bottom, #e0f7fa, #a7ffeb); color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+
+        /* Navigation */
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+        .nav-title { font-size: 2rem; color: #2e7d32; font-weight: bold; }
+        .nav-links { display: flex; gap: 1.5rem; }
+        .nav-links a { text-decoration: none; color: #388e3c; font-weight: 600; transition: color 0.3s; }
+        .nav-links a:hover { color: #1b5e20; }
+
+        /* Hero Section */
+        .hero { display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem; }
+        .hero img { width: calc(50% - 1rem); height: 400px; object-fit: cover; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
+
+        /* Gallery Section */
+        .gallery { margin-top: 3rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        .gallery img { width: 100%; height: 250px; object-fit: cover; border-radius: 12px; transition: transform 0.3s, filter 0.3s; }
+        .gallery img:hover { transform: scale(1.05); filter: brightness(1.1); }
+
+        /* Footer */
+        .footer { text-align: center; padding: 2rem 0; color: #555; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="nav-title">Nature Bliss</div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+
+        <div class="hero">
+            <img src="https://www.petalrepublic.com/wp-content/uploads/2021/04/Ultimate-Guide-to-Jasmine-Flower-Meaning-Types-and-Uses-1536x1024.jpeg" alt="Nature 1">
+            <img src="https://www.publicdomainpictures.net/pictures/100000/velka/tree-1408915417NIZ.jpg" alt="Nature 2">
+        </div>
+
+        <h2 class="section-title">Explore Nature</h2>
+        <div class="gallery">
+            <img src="https://wallpapercave.com/wp/wp7601873.jpg" alt="Nature 3">
+            <img src="https://www.pixelstalk.net/wp-content/uploads/images2/Garden-Backgrounds-For-Desktop.jpg" alt="Nature 4">
+            <img src="https://cdn.wallpapersafari.com/12/77/5jRDs9.jpg" alt="Nature 5">
+            <img src="https://wallpaperaccess.com/full/4734655.jpg" alt="Nature 6">
+            <img src="https://images5.alphacoders.com/684/684770.jpg" alt="Nature 7">
+            <img src="https://wallpapercave.com/wp/wp2638654.jpg" alt="Nature 8">
+            <img src="https://i.pinimg.com/originals/7c/5f/73/7c5f731b9e314fc9452aa70ebb84e59a.jpg" alt="Nature 9">
+            <img src="https://wallpapercave.com/wp/wp5750888.jpg" alt="Nature 10">
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Nature Bliss. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
