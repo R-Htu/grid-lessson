@@ -4,6 +4,7 @@ Welcome, dear students! 👩‍🏫👨‍🎓
 
 This repository contains all the **CSS Grid lessons** we have already covered together in class. I’ve uploaded them here so you can **review at your own pace**, revisit examples, and strengthen your understanding of layout techniques using Grid.
 
+🔗 **Live Site:** [r-htu.github.io/grid-lessson](https://r-htu.github.io/grid-lessson/)
 ---
 
 ## 📚 What's Included
@@ -44,12 +45,14 @@ This repo is mainly for **review and self-practice**. Use it to:
 - Compare Grid and Flexbox side-by-side
 
 ---
+## 💡 How to Use
 
-## 🔗 How to Use
+If you're viewing this locally:
 
-1. Clone or download this repository
-2. Open any `.html` file in your browser
-3. Try editing the code and observing the changes
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/r-htu/grid-lessson.git
+   cd grid-lessson
 
 ---
 
